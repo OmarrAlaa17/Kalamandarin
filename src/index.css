@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: main-font;
+  src: url(./assets/fonts/Amiri-Regular.ttf);
+}
+
+@font-face {
+  font-family: secondary-font;
+  src: url(./assets/fonts/BadeenDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: chinese-main-font;
+  src: url(./assets/fonts/songti-sc-black.ttf);
+}
+ 
+@font-face {
+  font-family: chinese-secondary-font;
+  src: url(./assets/fonts/RuiZiJiJiaHongHuangChaoJiBo.ttf);
+}
+
+
+:root {
+  direction: rtl;
+  color: #25282d;
+  font-family: main-font;
+  font-size: clamp(0.8rem, 0.54vi + 0.6rem, 1rem);
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #CD999C;
+    border-radius: 100vh;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #A63A50;
+  }
+
+  .buttonStyle {
+    @apply w-full px-3 py-2 transition-all bg-left bg-no-repeat rounded-md shadow-md text-accent-secondary bg-blend-screen bg-accent-primary hover:bg-accent-secondary hover:text-white;
+  }
+
+  .buttonStyleWhite {
+    @apply w-32 px-3 py-2 font-extrabold bg-left bg-no-repeat border-2 rounded-md text-accent-primary bg-blend-screen border-accent-primary hover:opacity-90;
+  }
+
+  .leaf-main-diagonal {
+    @apply rounded-tl-[40%] rounded-br-[40%];
+  }
+
+  .leaf-off-diagonal {
+    @apply rounded-tr-[40%] rounded-bl-[40%];
+  }
+
+  .btn {
+    @apply px-6 py-1 text-sm font-semibold rounded-xl bg-accent-secondary text-primary;
+  }
+}

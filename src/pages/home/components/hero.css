@@ -1,0 +1,64 @@
+.hero-grid {
+  direction: ltr;
+  aspect-ratio: 10/9;
+  display: grid;
+  grid-template-columns: 
+    [top-left-start] 0 [bottom-left-start] 1fr [top-left-end] 0 [bottom-left-end] 
+    0.4rem
+    [top-right-start] 0 [bottom-right-start] 1fr [bottom-right-end] 0 [top-right-end]
+  ;
+  grid-template-rows: 
+    [top-left-start] 0 [top-right-start] 1fr [top-left-end] 0 [top-right-end]
+    0.4rem 
+    [bottom-left-start] 0 [bottom-right-start] 1fr [bottom-left-end] 0 [bottom-right-end]
+  ;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero-grid{
+    aspect-ratio: 11/9;
+    grid-template-columns: 
+      [yellow-start] 1fr [top-left-start] 1fr [bottom-left-start] 2fr [yellow-end] 0 [top-left-end] 0 [bottom-left-end]
+      .5rem 
+      [top-right-start] 0 [bottom-right-start] 3fr [bottom-right-end]
+      .4rem 
+      [green-start] 1fr [top-right-end] 1fr [green-end]
+    ;
+    grid-template-rows: 
+      [top-right-start] 1fr [yellow-start] 1fr [top-left-start] 3fr [top-left-end] 0 [yellow-end] 0 [top-right-end]
+      .5rem
+      [bottom-right-start] 0 [bottom-left-start] 1fr [green-start] 1fr [bottom-left-end] 1fr [bottom-right-end] 0 [green-end]
+    ;
+  }
+}
+
+.hero-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @apply border-[3px] border-accent-secondary;
+}
+
+.hero-grid__yellow {
+  grid-area: yellow;
+}
+
+.hero-grid__green {
+  grid-area: green;
+}
+
+.hero-grid__top-left {
+  grid-area: top-left;
+}
+
+.hero-grid__bottom-left {
+  grid-area: bottom-left;
+}
+
+.hero-grid__top-right {
+  grid-area: top-right;
+}
+
+.hero-grid__bottom-right {
+  grid-area: bottom-right;
+}
