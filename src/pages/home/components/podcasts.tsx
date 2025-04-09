@@ -35,7 +35,7 @@ export const Podcasts = ({ title }: PodcastsProps) => {
           <img
             src={microphone}
             alt="cover"
-            className="absolute md:left-[37%] left-[10%] md:-top-[5%] top-0 object-fill md:w-28 w-20 -z-[20] -rotate-[20deg]"
+            className="absolute md:left-[37%] left-[10%] md:-top-[5%] top-0 object-fill md:w-24 w-20 -z-[20] -rotate-[20deg]"
           />
         </>
       )}
@@ -56,7 +56,7 @@ export const Podcasts = ({ title }: PodcastsProps) => {
                 <div className="relative">
                   <Link to={`/podcast/${podcast.id}`}>
                     <Card
-                      className={`rounded-3xl border-2 border-accent-secondary before:content-[''] before:absolute before:inset-0 before:block before:rounded-3xl before:z-10  ${
+                      className={`h-80 before:content-[''] before:absolute before:inset-0 before:block before:z-10  ${
                         index === 0
                           ? "before:bg-red-card-gradient hover:before:opacity-60"
                           : index === 1
@@ -69,7 +69,7 @@ export const Podcasts = ({ title }: PodcastsProps) => {
                       <img
                         src={podcast.image}
                         alt="cover"
-                        className="object-center w-full aspect-square rounded-3xl"
+                        className="object-cover w-full h-full"
                       />
                       <h1 className="absolute bottom-0 z-10 px-6 pb-3 text-lg font-semibold text-primary">
                         {podcast.title}
@@ -80,8 +80,8 @@ export const Podcasts = ({ title }: PodcastsProps) => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-accent-secondary text-primary focus:bg-accent-secondary focus:text-primary lg:flex" />
-          <CarouselNext className=" bg-accent-secondary text-primary focus:bg-accent-secondary focus:text-primary lg:flex" />
+          <CarouselPrevious className="border-none text-accent-secondary"/>
+          <CarouselNext className="border-none text-accent-secondary" />
         </Carousel>
       </div>
     </section>

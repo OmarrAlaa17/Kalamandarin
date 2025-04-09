@@ -36,7 +36,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  @apply border-[3px] border-accent-secondary;
 }
 
 .hero-grid__yellow {

@@ -20,7 +20,7 @@ function Navbar() {
                   to={item.url}
                   className={
                     location.pathname === item.url
-                      ? "text-accent-secondary underline"
+                      ? "text-accent-secondary"
                       : ""
                   }
                 >
@@ -35,7 +35,7 @@ function Navbar() {
               to={item.url}
               className={
                 location.pathname === item.url
-                  ? "text-accent-secondary underline"
+                  ? "text-accent-secondary"
                   : ""
               }
             >
@@ -48,10 +48,9 @@ function Navbar() {
   };
 
   return (
-    <div className="z-20 flex items-center justify-between px-8 py-4 border-b shadow-md lg:px-16 bg-primary border-accent-secondary">
+    <div className="z-20 flex items-center justify-between px-8 py-4 border-b shadow-md lg:px-16 bg-primary">
       <Link to="/" className="flex flex-row items-center justify-center gap-2 py-2">
         <img src={logo} alt="logo" className="w-20" />
-        <h1 className="text-3xl font-thin font-secondary"> كلامندرين</h1>
       </Link>
       <nav className="hidden gap-6 text-lg font-semibold md:flex underline-offset-8 decoration-2">
         {renderNavLinks(false)}
@@ -76,8 +75,7 @@ function Navbar() {
                 to="/"
                 className="flex flex-col items-center justify-center text"
               >
-                <img src={logo} alt="logo" className="w-32" />
-                <h1 className="py-2 pb-4 text-4xl font-thin font-secondary"> كلامندرين</h1>
+                <img src={logo} alt="logo" className="w-32 pb-10" />
               </Link>
             </DialogClose>
           </SheetHeader>
