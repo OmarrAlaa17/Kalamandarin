@@ -4,7 +4,7 @@ export const NAVDATA = [
         url: '/',
     },
     {
-        title: 'مصتلحات',
+        title: 'مصطلحات',
         url: '/text',
     },
     {
