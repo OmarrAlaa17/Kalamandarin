@@ -2,8 +2,8 @@ import { PODCASTSDATA } from "@/data/podcasts";
 import { useParams } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import { useState, useEffect } from "react";
-import microphone from "@/assets/icons/microphone.gif";
-import camera from "@/assets/icons/camera.gif";
+import microphone from "@/assets/icons/microphone.svg";
+import camera from "@/assets/icons/camera.svg";
 
 export const PodcastPreview = () => {
   const { id } = useParams();
@@ -32,54 +32,46 @@ export const PodcastPreview = () => {
       </div>
       <div className="relative flex flex-col overflow-hidden">
         <div className="hidden md:block w-full h-full -z-[20]">
-        <img
-          src={microphone}
-          alt="cover"
-          className="absolute left-[10%] top-[10%] object-fill w-28 -z-[20] -rotate-[20deg]"
-        />
-        <img
-          src={camera}
-          alt="cover"
-          className="absolute right-[10%] top-[30%] object-fill w-28 -z-[20] rotate-[20deg]"
-        />
-        <div className="absolute left-[40%]  w-[80rem] -z-[30] opacity-40">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#B3D1C9"
-            d="M56,-40.9C71.4,-25.4,81.9,-2.2,78.7,20.5C75.6,43.2,58.8,65.3,38.9,71.3C18.9,77.3,-4.3,67.3,-23.3,55.4C-42.3,43.6,-57,30,-64.9,10.5C-72.8,-9,-73.9,-34.4,-61.9,-49.1C-50,-63.8,-25,-67.7,-2.3,-65.9C20.3,-64,40.6,-56.3,56,-40.9Z"
-            transform="translate(100 100)"
+          <img
+            src={microphone}
+            alt="cover"
+            className="absolute left-[10%] top-[10%] object-fill w-28 -z-[20] -rotate-[20deg]"
           />
-        </svg>
-        </div>
-        <div className="absolute left-[15%] -top-10  w-[20rem] -z-[30] opacity-40 rotate-90">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#F6BD60"
-            d="M56,-40.9C71.4,-25.4,81.9,-2.2,78.7,20.5C75.6,43.2,58.8,65.3,38.9,71.3C18.9,77.3,-4.3,67.3,-23.3,55.4C-42.3,43.6,-57,30,-64.9,10.5C-72.8,-9,-73.9,-34.4,-61.9,-49.1C-50,-63.8,-25,-67.7,-2.3,-65.9C20.3,-64,40.6,-56.3,56,-40.9Z"
-            transform="translate(100 100)"
+          <img
+            src={camera}
+            alt="cover"
+            className="absolute right-[10%] top-[30%] object-fill w-20 -z-[20] rotate-[20deg]"
           />
-        </svg>
-        </div>
+          <div className="absolute left-[40%]  w-[80rem] -z-[30] opacity-40">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#B3D1C9"
+                d="M56,-40.9C71.4,-25.4,81.9,-2.2,78.7,20.5C75.6,43.2,58.8,65.3,38.9,71.3C18.9,77.3,-4.3,67.3,-23.3,55.4C-42.3,43.6,-57,30,-64.9,10.5C-72.8,-9,-73.9,-34.4,-61.9,-49.1C-50,-63.8,-25,-67.7,-2.3,-65.9C20.3,-64,40.6,-56.3,56,-40.9Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
+          <div className="absolute left-[15%] -top-10  w-[20rem] -z-[30] opacity-40 rotate-90">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#F6BD60"
+                d="M56,-40.9C71.4,-25.4,81.9,-2.2,78.7,20.5C75.6,43.2,58.8,65.3,38.9,71.3C18.9,77.3,-4.3,67.3,-23.3,55.4C-42.3,43.6,-57,30,-64.9,10.5C-72.8,-9,-73.9,-34.4,-61.9,-49.1C-50,-63.8,-25,-67.7,-2.3,-65.9C20.3,-64,40.6,-56.3,56,-40.9Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
         </div>
 
         <ul className="flex flex-row justify-center w-[80%] m-auto mb-10 gap-4">
-          <li>
+          <li className="flex flex-col items-center">
             <button
               onClick={() => {
                 setPlayer("Spotify");
               }}
-              className={`flex items-center justify-end rounded-e-4xl gap-4 border-2 border-[#2ebd59] min-w-44 hover:bg-[#2ebd59] hover:border-[#2ebd59] transition-all duration-300 ${
-                player === "Spotify" ? "bg-[#2ebd59] " : "bg-primary"
-              }`}
+              className={`${player==="Spotify" ? 'bg-[#2ebd59]':'bg-[#2ebd59]/80'} hover:bg-[#2ebd59] flex flex-row justify-center items-center gap-2 px-4 py-2 text-white`}
             >
-              <p
-                className={`font-mono text-lg font-extrabold hover:text-primary  ${
-                  player === "Spotify" ? "text-primary" : "text-secondary"
-                }`}
-              >
-                Spotify
-              </p>
-              <SocialIcon url="https://spotify.com" label="Youtube" as="div" />
+              <SocialIcon url="https://spotify.com" label="Youtube" as="div" bgColor="transparent"/>
+              <p className="pl-2 text-lg font-bold font-primary">Spotify</p>
             </button>
           </li>
           <li>
@@ -87,23 +79,15 @@ export const PodcastPreview = () => {
               onClick={() => {
                 setPlayer("Youtube");
               }}
-              className={`flex items-center justify-start rounded-s-full gap-4 border-2 border-[#ff3333] min-w-44 hover:bg-[#ff3333] hover:border-[#ff3333] transition-all duration-300 ${
-                player === "Youtube" ? "bg-[#ff3333] " : "bg-primary"
-              }`}
+              className={`${player==="Youtube" ? 'bg-[#ff3333]':'bg-[#ff3333]/80'} hover:bg-[#ff3333] flex flex-row justify-center items-center gap-2 px-4 py-2 text-white`}
             >
+              <p className="pr-2 text-lg font-bold font-primary">Youtube</p>
               <SocialIcon
                 url="https://youtube.com"
                 label="Youtube"
                 as="div"
-                className="translate-x-1"
+                bgColor="transparent"
               />
-              <p
-                className={`font-mono text-lg font-extrabold hover:text-primary ${
-                  player === "Youtube" ? "text-primary" : "text-secondary"
-                }`}
-              >
-                Youtube
-              </p>
             </button>
           </li>
         </ul>

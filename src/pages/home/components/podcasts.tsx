@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { PODCASTSDATA } from "@/data/podcasts";
-import microphone from "@/assets/icons/microphone.gif";
+import microphone from "@/assets/icons/microphone.svg";
 
 import {
   Carousel,
@@ -56,15 +56,8 @@ export const Podcasts = ({ title }: PodcastsProps) => {
                 <div className="relative">
                   <Link to={`/podcast/${podcast.id}`}>
                     <Card
-                      className={`h-80 before:content-[''] before:absolute before:inset-0 before:block before:z-10  ${
-                        index === 0
-                          ? "before:bg-red-card-gradient hover:before:opacity-60"
-                          : index === 1
-                          ? "before:bg-green-card-gradient hover:before:opacity-60"
-                          : index === 2
-                          ? "before:bg-blue-card-gradient hover:before:opacity-60"
-                          : "before:bg-yellow-card-gradient hover:before:opacity-60"
-                      } hover:cursor-pointer hover:scale-[1.02] transition-all duration-500 hover:shadow-lg`}
+                      className={`h-80 before:content-[''] before:absolute before:inset-0 before:block before:z-10 before:bg-blue-card-gradient hover:before:opacity-60
+                      hover:cursor-pointer hover:scale-[1.02] transition-all duration-500 hover:shadow-lg`}
                     >
                       <img
                         src={podcast.image}
@@ -80,7 +73,7 @@ export const Podcasts = ({ title }: PodcastsProps) => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="border-none text-accent-secondary"/>
+          <CarouselPrevious className="border-none text-accent-secondary" />
           <CarouselNext className="border-none text-accent-secondary" />
         </Carousel>
       </div>

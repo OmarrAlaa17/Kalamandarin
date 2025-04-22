@@ -5,7 +5,7 @@ export const NAVDATA = [
     },
     {
         title: 'مصطلحات',
-        url: '/text',
+        url: '/phrases',
     },
     {
         title: 'بودكاست',

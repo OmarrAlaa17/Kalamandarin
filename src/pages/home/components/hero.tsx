@@ -23,18 +23,18 @@ export const Hero = () => {
       </div>
       <div className="flex basis-1/2">
         <div className="flex flex-col items-center justify-start my-auto lg:items-start h-3/5">
-          <div className="flex flex-col gap-2 text-2xl font-bold md:text-3xl bg-primary-gradient bg-clip-text text-accent-primary">
+          <div className="flex flex-col gap-2 text-2xl font-bold text-black md:text-3xl bg-primary-gradient bg-clip-text">
             <h1 className="text-6xl"> كلامندرين</h1>
-            <p>كلام من شوارع مصر لشوارع الصين</p>
-            <p className="font-chinese">从埃及街头到中国街头的话儿</p>
+            <p>من شوارع مصر لشوارع الصين</p>
+            <p className="font-chinese">从埃及街头到中国街头</p>
           </div>
           <div className="z-10 flex flex-row items-center justify-center gap-4 mt-8 text-lg">
-            <button className="px-10 py-2 transition-all border-2 rounded-lg duration-50 border-accent-secondary bg-accent-secondary text-primary hover:cursor-pointer hover:bg-accent-secondary/80 hover:font-semibold">
-              <Link to="/text" className="">
+            <button className="px-10 py-2 transition-all border-2 duration-50 border-accent-secondary bg-accent-secondary text-primary hover:cursor-pointer hover:bg-accent-secondary/80 hover:font-semibold">
+              <Link to="/phrases" className="">
                 <p>اكتشف اكثر</p>
               </Link>
             </button>
-            <button className="px-10 py-2 transition-all border-2 rounded-lg duration-50 border-accent-secondary hover:cursor-pointer hover:bg-accent-secondary/5 hover:font-semibold min-w-40">
+            <button className="px-10 py-2 transition-all border-2 duration-50 border-accent-secondary bg-accent-secondary/5 hover:cursor-pointer hover:bg-accent-secondary/5 hover:font-semibold min-w-40">
               <Link to="/podcasts" className="">
                 <p className="w-full">بودكاست</p>
               </Link>

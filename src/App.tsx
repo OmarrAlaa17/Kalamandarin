@@ -4,6 +4,7 @@ import NotFound from "@/components/not-found";
 import Home from "@/pages/home/home";
 import { Route, Routes } from "react-router-dom";
 import { PodcastsPage } from "./pages/podcasts/podcastsPage";
+import { PhrasesPage } from "./pages/phrases/PhrasesPage";
 import { PodcastPreview } from "./pages/podcasts/podcastPreview";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/podcasts" element={<PodcastsPage />} />
+        <Route path="/phrases" element={<PhrasesPage />} />
         <Route path="/podcast/:id" element={<PodcastPreview/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
