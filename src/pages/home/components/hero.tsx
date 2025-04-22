@@ -34,11 +34,6 @@ export const Hero = () => {
                 <p>اكتشف اكثر</p>
               </Link>
             </button>
-            <button className="px-10 py-2 transition-all border-2 duration-50 border-accent-secondary bg-accent-secondary/5 hover:cursor-pointer hover:bg-accent-secondary/5 hover:font-semibold min-w-40">
-              <Link to="/podcasts" className="">
-                <p className="w-full">بودكاست</p>
-              </Link>
-            </button>
           </div>
         </div>
       </div>

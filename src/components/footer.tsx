@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="sticky items-center justify-center hidden shadow-xl bg-accent-primary/5 shadow-slate-600 h-fit md:flex">
+      <footer className="sticky items-center justify-center hidden shadow-xl shadow-slate-600 h-fit md:flex">
         <div className="flex items-center justify-between w-[80%] gap-2 my-4 ">
           <div className="flex flex-row items-center justify-center gap-2">
             <p className="font-bold text-black cursor-pointer hover:underline">
@@ -61,7 +61,7 @@ function Footer() {
         </div>
       </footer>
 
-      <footer className="flex flex-col items-center w-full pt-4 md:hidden bg-accent-primary/5 shadow-slate-600 ">
+      <footer className="flex flex-col items-center w-full pt-4 md:hidden shadow-slate-600 ">
         <img src={logoMob} alt="logo" className="pb-4 w-28" />
 
         <p className="mb-8 font-bold cursor-pointer text-blsck hover:underline">
