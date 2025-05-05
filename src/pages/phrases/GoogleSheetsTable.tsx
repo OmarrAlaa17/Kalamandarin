@@ -221,14 +221,14 @@ const GoogleSheetsTable = () => {
         </div>
       </div>
 
-      <ScrollArea className="w-full border-2 border-accent-primary/5">
+      <ScrollArea className="w-full">
         <Table>
           <TableHeader>
             <TableRow>
               {headers.map((header) => (
                 <TableHead
                   key={header}
-                  className="py-4 text-lg font-bold text-black capitalize border-2 bg-accent-primary/10 border-b-accent-primary border-accent-primary/20"
+                  className="py-4 text-lg font-bold text-black capitalize "
                 >
                   {header}
                 </TableHead>
@@ -241,7 +241,7 @@ const GoogleSheetsTable = () => {
                 {headers.map((header) => (
                   <TableCell
                     key={header}
-                    className="text-base font-medium text-black bg-white border-2 border-accent-primary/10 font-chinese"
+                    className="text-base font-medium text-black bg-white font-chinese"
                   >
                     {row[header] ?? <span className="italic">N/A</span>}
                   </TableCell>
